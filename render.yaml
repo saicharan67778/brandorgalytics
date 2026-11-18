@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: ai-link-analysis
+    name: brandorgalytics
     runtime: docker
     dockerfilePath: ./Dockerfile
     dockerContext: .

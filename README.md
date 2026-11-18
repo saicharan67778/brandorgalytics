@@ -1,4 +1,4 @@
-# AI Link Analysis
+# Brandorgalytics
 
 A FastAPI service that reads a public business website and returns a structured marketing report. One request produces a brand profile, competitor comparison, five cross-platform search queries, SEO recommendations, five service slots and audience segments. It runs in one process with no database.
 
@@ -126,7 +126,7 @@ Tests mock DNS, website HTTP and all three provider APIs. They exercise the endp
 
 ### Vercel
 
-1. Import the repository as a new Vercel project. If the repository contains the enclosing workspace, set **Root Directory** to `ai-link-analysis`. If the repository starts with this README, use the repository root.
+1. Import the repository as a new Vercel project. Use the repository root as the **Root Directory**.
 2. Use the **FastAPI** preset and its default install, build and output settings. Vercel installs `requirements.txt` and loads `app.main:app` on Python 3.12. Enable Fluid Compute so the function duration can cover extraction and generation.
 3. In **Environment Variables**, add `GEMINI_API_KEY` as a sensitive Production variable. Set `LLM_PROVIDER=gemini` and `LLM_MODEL=gemini-3.1-flash-lite`. Add the variables to Preview as well if you want branch deployments to generate reports.
 4. Deploy and open the assigned URL. The root redirects to Swagger at `/docs`. Check `GET /health`, then submit `https://plausible.io/` through `POST /link-analysis` to verify website access and the Gemini key. Redeploy after changing environment variables.
@@ -135,9 +135,9 @@ Each warm Vercel function instance has its own cache and per-IP counters. Cold s
 
 ### Docker and Render
 
-Run the container locally with `docker build -t ai-link-analysis .` and `docker run --rm --env-file .env -p 4000:4000 ai-link-analysis`. The image runs as an unprivileged user and starts with `python -m app.main`.
+Run the container locally with `docker build -t brandorgalytics .` and `docker run --rm --env-file .env -p 4000:4000 brandorgalytics`. The image runs as an unprivileged user and starts with `python -m app.main`.
 
-For Render, push the project to a repository you control and create a Blueprint using `render.yaml`. If the repository contains the enclosing workspace, select `ai-link-analysis/render.yaml` as the Blueprint path and set the service root directory to `ai-link-analysis`. Set GEMINI_API_KEY in the Render dashboard. Render supplies `PORT`. Verify the health check, open Swagger and submit a public website before sharing the service.
+For Render, push the project to a repository you control and create a Blueprint using `render.yaml`. Select `render.yaml` at the repository root as the Blueprint path. Set GEMINI_API_KEY in the Render dashboard. Render supplies `PORT`. Verify the health check, open Swagger and submit a public website before sharing the service.
 
 | Environment | Base URL | API docs | Analysis |
 |---|---|---|---|
@@ -150,4 +150,4 @@ For Render, push the project to a repository you control and create a Blueprint 
 
 The local Swagger screenshot shows both endpoints. After configuring credentials, expand a successful response for the panel demonstration. The JSON files in `docs/samples/` preserve the full captured responses.
 
-![Running Swagger documentation for the AI Link Analysis API](docs/swagger.png)
+![Running Swagger documentation for the Brandorgalytics API](docs/swagger.png)

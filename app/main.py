@@ -11,7 +11,7 @@ from app.schemas import ErrorResponse, Response
 from app.schemas import Request as LinkRequest
 from app.services.analysis_service import AnalysisService
 
-app = FastAPI(title="AI Link Analysis", version="1.0")
+app = FastAPI(title="Brandorgalytics", version="1.0")
 service = AnalysisService(Settings())
 
 

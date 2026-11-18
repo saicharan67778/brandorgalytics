@@ -40,7 +40,7 @@ async def fetch(
             "Host": url.netloc.decode(),
             "Accept": "text/html",
             "Accept-Encoding": "identity",
-            "User-Agent": "Mozilla/5.0 (compatible; LinkAnalysis/1.0)",
+            "User-Agent": "Mozilla/5.0 (compatible; Brandorgalytics/1.0)",
         }
         # Isolate pools per hop: two TLS names may share a numerical IP.
         async with (
