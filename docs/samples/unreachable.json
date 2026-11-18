@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "path": "/link-analysis",
+  "request": {
+    "url": "https://nonexistent.invalid/"
+  },
+  "status": 502,
+  "response": {
+    "success": false,
+    "error": {
+      "code": "site_unreachable",
+      "message": "Website DNS lookup failed."
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "path": "/link-analysis",
+  "request": {
+    "url": "http://127.0.0.1/"
+  },
+  "status": 422,
+  "response": {
+    "success": false,
+    "error": {
+      "code": "blocked_url",
+      "message": "Use a public HTTP or HTTPS website on port 80 or 443."
+    }
+  }
+}

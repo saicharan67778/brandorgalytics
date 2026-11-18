@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "path": "/link-analysis",
+  "request": {
+    "url": "https://plausible.io/"
+  },
+  "status": 502,
+  "response": {
+    "success": false,
+    "error": {
+      "code": "llm_configuration",
+      "message": "The analysis provider is not configured."
+    }
+  }
+}
