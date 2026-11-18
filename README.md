@@ -1,6 +1,39 @@
 # Brandorgalytics
 
-A FastAPI service that reads a public business website and returns a structured marketing report. One request produces a brand profile, competitor comparison, five cross-platform search queries, SEO recommendations, five service slots and audience segments. It runs in one process with no database.
+Brandorgalytics reads the public business website you submit and uses an LLM to turn its content into a structured marketing report. The live demo runs on Vercel with FastAPI and Gemini 3.1 Flash-Lite. [Open the live API](https://brandorgalytics.vercel.app/docs)
+
+## Analyze a website
+
+In Swagger, expand **POST /link-analysis**, select **Try it out**, enter the JSON below and click **Execute**. Replace `url` with the public HTTP or HTTPS business page you want to analyze.
+
+```json
+{"url": "https://www.londonreviewbookshop.co.uk/"}
+```
+
+Both of these websites returned HTTP 200 and all five analysis sections on the deployed API.
+
+| Website tested | Business identified | What to inspect |
+|---|---|---|
+| `https://www.londonreviewbookshop.co.uk/` | London Review Bookshop | The live request fetched two pages. Check whether the recommendations fit a local bookshop. |
+| `https://plausible.io/` | Plausible Analytics | Inspect the software offerings, privacy-related queries and customer needs. [Full saved report](docs/samples/analysis.json) |
+
+The extractor uses publicly readable HTML. A site that requires login, blocks automated requests or renders its main content with JavaScript can yield a low-confidence report. If there is too little usable content, the API returns an error.
+
+### What the response contains
+
+The top-level `brand` object identifies the business. The `analysis` object contains five sections.
+
+| Response field | What to look for |
+|---|---|
+| `competitor_analysis` | Competitors, strengths, opportunities and a comparison table. Each competitor carries a source label. |
+| `target_search_queries` | Five distinct suggested queries covering Google Search, Facebook, Instagram, LinkedIn and X. Each includes suitable platforms, search intent, an explanation of business relevance and a target audience. The report omits search-volume and ranking estimates. |
+| `seo_improvements` | Primary, secondary, long-tail and business keywords, a recommended title and title structure, a meta description and suggested content topics. |
+| `top_services` | Five entries with a description, industry, target customer, benefit and source. For software businesses these can be product capabilities. Thin evidence can leave a service unknown. |
+| `target_audience` | Primary and secondary audiences, industries, customer profiles, interests and marketing segments. Each `audience_requirements` row pairs an `audience` and `business_type` with a specific `requirement`. Geographic focus can be empty when the site provides insufficient evidence. |
+
+`meta.duration_ms` measures request wall time. Token usage includes a repair generation if needed, and an unpriced model returns a null cost estimate. On a cache hit, token usage and cost for the request are zero. The page count and confidence describe the original extraction. [Production OpenAPI schema](https://brandorgalytics.vercel.app/openapi.json)
+
+## Architecture
 
 ```mermaid
 flowchart LR
@@ -44,17 +77,13 @@ On macOS or Linux use `python3 -m venv .venv`, `source .venv/bin/activate` and `
 | CACHE_TTL | 900 | Successful result lifetime in seconds. Zero disables storage |
 | RATE_LIMIT | 6 | Requests per client IP per rolling minute |
 
-## Try the API
-
-Open the interactive docs, expand **POST /link-analysis**, select **Try it out** and enter a public website. From PowerShell use the same request as the live sample capture.
+You can submit the same kind of request to your local server from PowerShell.
 
 ```powershell
 Invoke-RestMethod -Method Post -Uri http://localhost:4000/link-analysis -ContentType application/json -Body '{"url":"https://plausible.io/"}'
 ```
 
-The success contract and all nested types appear in Swagger and `/openapi.json`. `meta.duration_ms` measures wall time for the request. Usage includes a repair generation when needed. On cache hits, usage and cost are zero and `pages_fetched` describes the cached evidence. An unpriced model returns a null cost.
-
-### Actual request and response pairs
+## Actual request and response pairs
 
 Plausible returned a validated report from Gemini 3.1 Flash-Lite in 13.4 seconds. The request fetched three pages and used 2,362 input and 2,262 output tokens. A repeat request hit the cache. Reviewers can read the full saved report even when the live quota is exhausted. [Successful Plausible request and response](docs/samples/analysis.json)
 
@@ -148,6 +177,12 @@ For Render, push the project to a repository you control and create a Blueprint 
 
 ## Screenshots
 
-The local Swagger screenshot shows both endpoints. After configuring credentials, expand a successful response for the panel demonstration. The JSON files in `docs/samples/` preserve the full captured responses.
+### Live analysis output
+
+Swagger shows HTTP 200 and the opening of the London Review Bookshop report from the deployed API. For a complete response, see the saved Plausible example. [Full Plausible report](docs/samples/analysis.json)
+
+![Live Swagger response showing HTTP 200 and the London Review Bookshop analysis](docs/analysis-output.png)
+
+### Swagger endpoints
 
 ![Running Swagger documentation for the Brandorgalytics API](docs/swagger.png)
