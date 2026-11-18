@@ -142,7 +142,7 @@ For Render, push the project to a repository you control and create a Blueprint 
 | Environment | Base URL | API docs | Analysis |
 |---|---|---|---|
 | Local | http://localhost:4000 | http://localhost:4000/docs | POST http://localhost:4000/link-analysis |
-| Hosted | Pending deployment | Append `/docs` to the assigned URL | POST to `/link-analysis` on the assigned URL |
+| Vercel | https://brandorgalytics.vercel.app | [Try the live API](https://brandorgalytics.vercel.app/docs) | POST https://brandorgalytics.vercel.app/link-analysis |
 
 `GET /health` verifies that the service process is responding. A successful analysis verifies website access and the configured provider.
 
