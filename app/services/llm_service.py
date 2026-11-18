@@ -34,8 +34,25 @@ for unsupported facts, including missing service slots. Never pad with invented
 offerings. Give at least three real, relevant competitor suggestions, marked
 ai_suggestion unless explicitly identified as competitors on the site. Use
 'Unknown' for uncertain URLs. Each comparison cell must identify its comparator.
-Give five distinct search queries spanning Google, Facebook, Instagram, LinkedIn
-and X. Provide recommendations, never volumes, rankings, statistics or testimonials.
+Recommend five distinct queries, covering Google Search (Google), Facebook,
+Instagram, LinkedIn and X. Use natural wording for that platform and buyer:
+consider service search, local or community discovery, visual inspiration, B2B
+evaluation, and topical discussions as appropriate. For each, state intent,
+who would search, and a sentence explaining how the query relates to something
+this business offers. Avoid arbitrary year modifiers. No volume or ranking data.
+For SEO, choose a primary keyword and specific secondary, long-tail and business
+keywords. Use the primary keyword as a natural phrase in the title and show its
+structure. Write the meta description as a short human-friendly business summary
+using relevant keywords. Describe product functionality; avoid blanket legal
+assurances about consent or compliance. Suggest concrete content topics in suitable formats,
+including location pages only when supported by a geographic focus.
+Order services by prominence in the site content. For a product business, use
+distinct offerings or capabilities. Mark an offering from_website only when it
+is explicitly described; mark a deduction inferred and explain its basis.
+For audience_requirements, pair each supported marketing audience with a business
+type and a concrete need or challenge. Use an empty location_focus when the
+market geography is unknown. A hosting location alone does not establish a market.
+Never invent statistics or testimonials.
 Keep descriptions short. Cover all five comparison attributes exactly once."""
 LIMIT = 5500
 

@@ -192,6 +192,25 @@ def test_reject_extra_field():
         Report.model_validate(data)
 
 
+@pytest.mark.parametrize(
+    "missing", ["Google", "Facebook", "Instagram", "LinkedIn", "X"]
+)
+def test_all_query_platforms_required(missing):
+    data = fixture_report()
+    for query in data["analysis"]["target_search_queries"]:
+        if query["platforms"] == [missing]:
+            query["platforms"] = ["Facebook" if missing == "Google" else "Google"]
+    with pytest.raises(ValueError, match="five platforms"):
+        Report.model_validate(data)
+
+
+def test_query_needs_business_explanation():
+    data = fixture_report()
+    data["analysis"]["target_search_queries"][0]["relevance"] = "High"
+    with pytest.raises(ValueError, match="business relevance"):
+        Report.model_validate(data)
+
+
 def test_rate_and_invalid_payload(env):
     client, _ = env
     assert client.post("/link-analysis", json={}).status_code == 422

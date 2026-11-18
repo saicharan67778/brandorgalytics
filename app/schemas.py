@@ -2,7 +2,14 @@
 
 from typing import Annotated, Literal, Self
 
-from pydantic import BaseModel, ConfigDict, Field, StringConstraints, model_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    StringConstraints,
+    field_validator,
+    model_validator,
+)
 
 from app.services.website_extractor import Confidence
 
@@ -75,12 +82,34 @@ class Query(Model):
     query: Text
     platforms: Annotated[list[Platform], Field(min_length=1)]
     intent: Text
-    relevance: Text
+    relevance: Text = Field(
+        description="Explain how this search connects a buyer's need to a specific offering."
+    )
     target_audience: Text
+
+    @field_validator("relevance")
+    @classmethod
+    def explain_relevance(cls, value: str) -> str:
+        if value.casefold().rstrip(".") in {
+            "low",
+            "medium",
+            "high",
+            "very high",
+            "relevant",
+        }:
+            raise ValueError("Explain the business relevance of the query")
+        return value
 
 
 class Topic(Model):
-    type: Literal["landing page", "industry page", "FAQ", "blog topic", "location page"]
+    type: Literal[
+        "landing page",
+        "industry page",
+        "FAQ",
+        "blog topic",
+        "location page",
+        "business article",
+    ]
     topic: Text
 
 
@@ -104,6 +133,12 @@ class Service(Model):
     source: Literal["from_website", "inferred"]
 
 
+class AudienceSegment(Model):
+    audience: Text
+    business_type: Text
+    requirement: Text
+
+
 class Audience(Model):
     primary_audience: list[Text]
     secondary_audience: list[Text]
@@ -114,6 +149,7 @@ class Audience(Model):
     location_focus: list[Text]
     interests: list[Text]
     recommended_segments: list[Text]
+    audience_requirements: list[AudienceSegment]
 
 
 class Analysis(Model):

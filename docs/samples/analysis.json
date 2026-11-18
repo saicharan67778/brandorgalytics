@@ -8,23 +8,23 @@
   "response": {
     "brand": {
       "name": "Plausible Analytics",
-      "category": "Web Analytics SaaS",
-      "summary": "Plausible is a privacy-focused, lightweight, and open-source alternative to Google Analytics. It emphasizes simplicity, GDPR compliance without cookie banners, and fast site performance. The brand is bootstrapped, independent, and EU-hosted. Confidence is high based on clear mission statements and product feature lists provided on the site."
+      "category": "Web Analytics Software",
+      "summary": "Plausible Analytics is a privacy-focused, lightweight, and open-source alternative to Google Analytics. It emphasizes simplicity, GDPR compliance without cookie banners, and fast site performance. The brand is self-funded and independent, positioning itself against the complexity and data-collection practices of major tech incumbents."
     },
     "analysis": {
       "competitor_analysis": {
-        "brand_overview": "Plausible positions itself as the ethical, user-friendly, and performant alternative to the complex and privacy-invasive Google Analytics.",
+        "brand_overview": "Plausible is a privacy-first, lightweight web analytics platform that prioritizes user experience and data sovereignty, specifically targeting users frustrated by the complexity and privacy implications of Google Analytics.",
         "competitors": [
           {
             "name": "Matomo",
             "website": "https://matomo.org/",
             "strengths": [
-              "On-premise hosting options",
-              "Feature-rich"
+              "Highly customizable",
+              "On-premise hosting options"
             ],
             "weaknesses": [
-              "Higher complexity",
-              "Heavier script"
+              "Can be complex to set up",
+              "Heavier script than Plausible"
             ],
             "source": "ai_suggestion"
           },
@@ -32,8 +32,8 @@
             "name": "Fathom Analytics",
             "website": "https://usefathom.com/",
             "strengths": [
-              "Privacy-focused",
-              "Simple UI"
+              "Simple interface",
+              "Privacy-focused"
             ],
             "weaknesses": [
               "Less open-source transparency",
@@ -45,44 +45,44 @@
             "name": "Simple Analytics",
             "website": "https://simpleanalytics.com/",
             "strengths": [
-              "Clean interface",
+              "Clean UI",
               "Privacy-first"
             ],
             "weaknesses": [
-              "Limited historical data depth",
-              "Higher price point"
+              "Limited feature set compared to Plausible",
+              "Higher price point for some tiers"
             ],
             "source": "ai_suggestion"
           }
         ],
         "strengths": [
           "Lightweight script",
-          "GDPR compliance",
-          "No cookie banners",
-          "Open source",
-          "EU-hosted"
+          "GDPR compliance without banners",
+          "Simple, one-page dashboard",
+          "Open-source"
         ],
         "opportunities": [
-          "Targeting privacy-conscious EU businesses",
-          "Expanding AI traffic tracking features",
-          "Integration with more CMS platforms"
+          "Expanding enterprise features",
+          "Deepening AI traffic analysis",
+          "Increasing market share among privacy-conscious agencies"
         ],
         "main_category": "Web Analytics",
         "products_services": [
-          "Real-time dashboard",
-          "Goal tracking",
+          "Web analytics dashboard",
+          "Goal and conversion tracking",
+          "SEO performance integration",
           "Funnel analysis",
-          "Search Console integration",
-          "Revenue tracking"
+          "Real-time traffic monitoring"
         ],
         "competitive_advantages": [
+          "No cookie banners required",
           "54x smaller script than Google Analytics",
-          "No cookie consent required",
-          "Independent and bootstrapped"
+          "EU-hosted data",
+          "Independent and self-funded"
         ],
         "positioning_opportunities": [
-          "Position as the 'green' analytics choice due to lower carbon footprint",
-          "Target agencies needing simple client reporting"
+          "Position as the ethical standard for web analytics",
+          "Targeting agencies needing simple client reporting"
         ],
         "comparison_table": [
           {
@@ -93,7 +93,7 @@
           {
             "attribute": "main service",
             "your_brand": "Privacy-friendly web analytics",
-            "competitor": "Comprehensive web analytics"
+            "competitor": "Comprehensive web analytics suite"
           },
           {
             "attribute": "target market",
@@ -102,185 +102,214 @@
           },
           {
             "attribute": "key strength",
-            "your_brand": "Simplicity and performance",
-            "competitor": "Feature depth and control"
+            "your_brand": "Lightweight and simple",
+            "competitor": "Feature depth and customization"
           },
           {
             "attribute": "opportunity",
-            "your_brand": "Market to privacy-conscious EU firms",
-            "competitor": "Market to data-heavy enterprise"
+            "your_brand": "Market share from GA4",
+            "competitor": "On-premise data control"
           }
         ]
       },
       "target_search_queries": [
         {
-          "query": "privacy friendly google analytics alternative",
+          "query": "privacy-friendly Google Analytics alternative",
           "platforms": [
             "Google"
           ],
-          "intent": "Commercial",
-          "relevance": "High",
-          "target_audience": "Website owners frustrated with GA4"
+          "intent": "Commercial investigation",
+          "relevance": "Directly addresses the primary value proposition of Plausible.",
+          "target_audience": "Website owners looking to switch from GA."
         },
         {
           "query": "how to track website traffic without cookies",
           "platforms": [
-            "LinkedIn"
-          ],
-          "intent": "Informational",
-          "relevance": "Medium",
-          "target_audience": "Privacy officers and developers"
-        },
-        {
-          "query": "lightweight website analytics for ecommerce",
-          "platforms": [
-            "Instagram"
-          ],
-          "intent": "Commercial",
-          "relevance": "High",
-          "target_audience": "Ecommerce store owners"
-        },
-        {
-          "query": "GDPR compliant analytics tools 2024",
-          "platforms": [
             "X"
           ],
           "intent": "Informational",
-          "relevance": "High",
-          "target_audience": "EU-based business owners"
+          "relevance": "Highlights the technical advantage of Plausible's cookieless tracking.",
+          "target_audience": "Privacy-conscious developers and marketers."
         },
         {
-          "query": "simple analytics dashboard for agencies",
+          "query": "best analytics for ecommerce sites",
+          "platforms": [
+            "LinkedIn"
+          ],
+          "intent": "B2B evaluation",
+          "relevance": "Connects Plausible's revenue tracking features to business needs.",
+          "target_audience": "Ecommerce managers and business owners."
+        },
+        {
+          "query": "simple website analytics dashboard",
+          "platforms": [
+            "Instagram"
+          ],
+          "intent": "Visual discovery",
+          "relevance": "Showcases the clean, one-page UI of the Plausible dashboard.",
+          "target_audience": "Creators and small business owners."
+        },
+        {
+          "query": "GDPR compliant analytics for small business",
           "platforms": [
             "Facebook"
           ],
-          "intent": "Commercial",
-          "relevance": "Medium",
-          "target_audience": "Digital marketing agencies"
+          "intent": "Community discovery",
+          "relevance": "Addresses the legal pain point of cookie banners.",
+          "target_audience": "Small business owners in the EU."
         }
       ],
       "seo_improvements": {
         "primary_keyword": "privacy-friendly Google Analytics alternative",
         "secondary_keywords": [
           "lightweight web analytics",
-          "GDPR compliant analytics",
-          "open source analytics"
+          "cookieless tracking",
+          "GDPR compliant analytics"
         ],
-        "recommended_title": "Plausible Analytics | Simple, Privacy-Friendly Google Analytics Alternative",
-        "meta_description": "Switch to Plausible: a lightweight, open-source, and privacy-friendly alternative to Google Analytics. No cookies, no GDPR consent, just clear insights.",
+        "recommended_title": "Plausible Analytics: The Privacy-Friendly Google Analytics Alternative",
+        "meta_description": "Switch to Plausible Analytics for a lightweight, privacy-friendly, and GDPR-compliant alternative to Google Analytics. Get simple, actionable insights without cookie banners.",
         "supporting_content": [
           {
-            "type": "landing page",
-            "topic": "Plausible vs Google Analytics Comparison"
-          },
-          {
-            "type": "FAQ",
-            "topic": "Is Plausible GDPR compliant?"
+            "type": "blog topic",
+            "topic": "Why your website doesn't need cookie banners"
           },
           {
             "type": "blog topic",
-            "topic": "How to reduce your website's carbon footprint with lightweight analytics"
+            "topic": "How to import your Google Analytics data to Plausible"
+          },
+          {
+            "type": "industry page",
+            "topic": "Web analytics for SaaS companies"
+          },
+          {
+            "type": "FAQ",
+            "topic": "Is Plausible Analytics GDPR compliant?"
+          },
+          {
+            "type": "business article",
+            "topic": "The environmental impact of heavy analytics scripts"
           }
         ],
         "long_tail_keywords": [
-          "how to track website traffic without cookie banners",
-          "best analytics for small business websites"
+          "how to replace google analytics with plausible",
+          "simple analytics for small business",
+          "open source web analytics software"
         ],
         "business_keywords": [
           "web analytics",
-          "privacy-first",
-          "SaaS",
-          "open source"
+          "conversion tracking",
+          "SEO performance",
+          "traffic monitoring"
         ],
-        "title_structure": "Brand Name | Value Proposition | Primary Keyword"
+        "title_structure": "Brand Name | Primary Keyword - Secondary Keyword"
       },
       "top_services": [
         {
-          "name": "Real-time Dashboard",
-          "description": "Monitor live traffic and key metrics without page refreshes.",
-          "target_industry": "All",
-          "target_customer": "Site owners",
-          "main_benefit": "Immediate visibility into traffic spikes",
+          "name": "Web Analytics Dashboard",
+          "description": "A simple, one-page dashboard providing essential traffic insights without complex menus.",
+          "target_industry": "General Web",
+          "target_customer": "Website owners",
+          "main_benefit": "Ease of use and quick insights",
           "source": "from_website"
         },
         {
-          "name": "Goal & Revenue Tracking",
-          "description": "Track conversions and revenue without complex tag managers.",
+          "name": "Cookieless Tracking",
+          "description": "Privacy-first tracking that does not require cookie banners or GDPR consent.",
+          "target_industry": "General Web",
+          "target_customer": "Privacy-conscious businesses",
+          "main_benefit": "Compliance and user privacy",
+          "source": "from_website"
+        },
+        {
+          "name": "SEO Performance Integration",
+          "description": "Connects with Google Search Console to track search queries and organic performance.",
+          "target_industry": "Digital Marketing",
+          "target_customer": "SEO specialists",
+          "main_benefit": "Unified SEO and traffic data",
+          "source": "from_website"
+        },
+        {
+          "name": "Goal and Revenue Tracking",
+          "description": "Codeless tracking for form completions, file downloads, and custom revenue events.",
           "target_industry": "Ecommerce",
           "target_customer": "Online retailers",
-          "main_benefit": "Simplified conversion measurement",
+          "main_benefit": "Actionable conversion data",
           "source": "from_website"
         },
         {
-          "name": "SEO Performance Analysis",
-          "description": "Connects with Search Console to view organic search data.",
-          "target_industry": "Content Marketing",
-          "target_customer": "SEO specialists",
-          "main_benefit": "Unified view of SEO and traffic",
-          "source": "from_website"
-        },
-        {
-          "name": "Funnel Analysis",
-          "description": "Measure user drop-off across specific sequences.",
-          "target_industry": "SaaS",
-          "target_customer": "Product managers",
-          "main_benefit": "Identify bottlenecks in user journeys",
-          "source": "from_website"
-        },
-        {
-          "name": "Bot Filtering",
-          "description": "Automatic exclusion of bots and referrer spam.",
-          "target_industry": "All",
-          "target_customer": "Data analysts",
-          "main_benefit": "Accurate human traffic reporting",
+          "name": "Lightweight Script",
+          "description": "A script 54x smaller than Google Analytics, improving page load speeds and Core Web Vitals.",
+          "target_industry": "Web Development",
+          "target_customer": "Developers",
+          "main_benefit": "Improved site performance",
           "source": "from_website"
         }
       ],
       "target_audience": {
         "primary_audience": [
-          "Website owners",
-          "SaaS founders",
-          "Ecommerce store managers"
+          "SaaS companies",
+          "Ecommerce businesses",
+          "Agencies"
         ],
         "secondary_audience": [
-          "Digital marketing agencies",
-          "Privacy officers",
-          "Developers"
+          "Creators",
+          "Publishers",
+          "Public sector organizations"
         ],
         "industries": [
-          "SaaS",
-          "Ecommerce",
-          "Publishing",
-          "Public sector"
+          "Technology",
+          "Retail",
+          "Digital Marketing",
+          "Media"
         ],
         "customer_needs": [
           "Privacy compliance",
-          "Site speed",
-          "Ease of use",
+          "Site speed optimization",
+          "Simplified reporting",
           "Data ownership"
         ],
         "business_types": [
-          "Small to medium businesses",
-          "Independent creators",
-          "Agencies"
+          "SaaS",
+          "Ecommerce",
+          "Agencies",
+          "Publishing"
         ],
         "customer_profiles": [
-          "Privacy-conscious tech users",
-          "Performance-focused developers"
+          "Privacy-conscious business owners",
+          "Performance-focused developers",
+          "Marketing managers"
         ],
         "location_focus": [
-          "European Union",
-          "Global"
+          "Global",
+          "European Union (due to hosting)"
         ],
         "interests": [
           "Data privacy",
           "Web performance",
           "Open source software",
-          "Sustainability"
+          "SEO"
         ],
         "recommended_segments": [
-          "EU-based businesses needing GDPR compliance",
-          "Agencies managing multiple client sites"
+          "EU-based businesses",
+          "Performance-obsessed developers",
+          "Small business owners"
+        ],
+        "audience_requirements": [
+          {
+            "audience": "SaaS companies",
+            "business_type": "SaaS",
+            "requirement": "Need accurate conversion tracking without compromising user trust."
+          },
+          {
+            "audience": "Agencies",
+            "business_type": "Marketing Agency",
+            "requirement": "Need simple, client-friendly reporting that requires no training."
+          },
+          {
+            "audience": "Ecommerce",
+            "business_type": "Online Retail",
+            "requirement": "Need to track revenue and funnels without complex setup."
+          }
         ]
       }
     },
@@ -289,10 +318,10 @@
     "meta": {
       "provider": "gemini",
       "model": "gemini-3.1-flash-lite",
-      "input_tokens": 2111,
-      "output_tokens": 1939,
-      "est_cost_usd": 0.00343625,
-      "duration_ms": 15781,
+      "input_tokens": 2362,
+      "output_tokens": 2262,
+      "est_cost_usd": 0.0039835,
+      "duration_ms": 13391,
       "pages_fetched": 3,
       "content_confidence": "high",
       "evidence_note": null,

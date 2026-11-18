@@ -56,7 +56,7 @@ The success contract and all nested types appear in Swagger and `/openapi.json`.
 
 ### Actual request and response pairs
 
-Plausible returned a validated report from Gemini 3.1 Flash-Lite in 15.8 seconds. The request fetched three pages and used 2,111 input and 1,939 output tokens. A repeat request hit the cache. Reviewers can read the full saved report even when the live quota is exhausted. [Successful Plausible request and response](docs/samples/analysis.json)
+Plausible returned a validated report from Gemini 3.1 Flash-Lite in 13.4 seconds. The request fetched three pages and used 2,362 input and 2,262 output tokens. A repeat request hit the cache. Reviewers can read the full saved report even when the live quota is exhausted. [Successful Plausible request and response](docs/samples/analysis.json)
 
 To refresh the samples, run `python scripts/capture_samples.py` against a running server. Failed requests are saved separately, preserving the latest successful analysis.
 
